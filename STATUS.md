@@ -1,0 +1,1 @@
+Manuscript scaffold linked to the uncertainty-aware action gate prototype; no publication or certification claim.
