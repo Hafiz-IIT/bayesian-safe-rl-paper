@@ -1,0 +1,3 @@
+# Abstract
+
+The proposed direction separates prediction from authorization. A transition estimate is represented by a central prediction and uncertainty radius; action authorization uses the resulting interval to distinguish confident allowance, verification-required cases, and blocking. The current lab is deliberately minimal and is intended as a foundation for richer probabilistic dynamics and formal safety analysis.
