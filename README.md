@@ -12,4 +12,4 @@ Can transition uncertainty be incorporated into action authorization so that unc
 - `paper/limitations.md`
 - `paper/reproducibility.md`
 
-**Status:** research scaffold; no safety certification or publication claim.
+**Status:** research scaffold; no safety certification or publication claim.\n\n## Companion relationship\n\nThis repository is the **manuscript companion** to [Bayesian Safe RL Lab](https://github.com/Hafiz-IIT/bayesian-safe-rl-lab), the executable prototype. The manuscript does not establish safety certification or deployment.\n
