@@ -1,0 +1,8 @@
+{
+  "study": "bayesian-uncertainty-action-gating",
+  "status": "not_run",
+  "results_available": false,
+  "data_type": "synthetic_scalar_hazard_observations",
+  "required_metrics": ["false_allow_rate", "false_block_rate", "verification_rate", "interval_coverage", "calibration_error"],
+  "notes": "Scalar Normal-Normal posterior heuristic only; not a complete Bayesian RL system."
+}
