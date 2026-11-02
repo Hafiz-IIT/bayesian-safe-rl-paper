@@ -1,0 +1,29 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs}
+\usepackage{hyperref}
+\title{Bayesian Linear Models as Priors for Safe Reinforcement Learning in Robotics}
+\author{Syed Hafiz Ali}
+\date{Research manuscript in preparation}
+\begin{document}
+\maketitle
+\begin{abstract}
+This manuscript specifies a research direction for using uncertainty-aware Bayesian estimates to inform intervention decisions in autonomous control. The companion implementation currently demonstrates a scalar Normal--Normal posterior update and interval-based ALLOW, VERIFY, or BLOCK gate. It is not a complete Bayesian reinforcement-learning algorithm and provides no formal safety guarantee.
+\end{abstract}
+\section{Motivation}
+An autonomous controller should not treat a point prediction as certainty. When predicted risk is close to a decision threshold, uncertainty can justify evidence gathering or human review rather than immediate action.
+\section{Scalar model}
+For a scalar latent hazard parameter with Gaussian prior $\theta\sim\mathcal{N}(\mu_0,\sigma_0^2)$ and observations with known Gaussian noise variance, the posterior remains Gaussian. The prototype implements the conjugate update and forms an interval using a configurable multiplier.
+\section{Decision rule}
+For an interval $[\ell,u]$ and threshold $\tau$, authorize only when $u\leq\tau$, block when $\ell>\tau$, and otherwise request verification. This is a decision heuristic; interval calibration and operational costs must be evaluated.
+\section{Research questions}
+How does uncertainty-aware gating compare with point-estimate thresholding? How sensitive is it to prior misspecification, observation noise, and distribution shift? What is the cost of verification relative to false authorization?
+\section{Evaluation design}
+Use labelled synthetic hazard distributions and matched test cases. Compare point estimates, fixed-margin thresholds, and posterior intervals. Report false-allow, false-block, verification, coverage, calibration, and intervention rates across uncertainty regimes.
+\section{Results}
+No empirical safety or calibration results are claimed. Results must be generated from preregistered configurations and reported with uncertainty intervals.
+\section{Limitations}
+The current model is scalar, assumes known observation variance, and does not represent sequential state transitions, policy learning, correlated observations, or adversarial dynamics. A credible interval is not a safety certificate.
+\section{Conclusion}
+Bayesian uncertainty can inform when to defer, but safe control requires calibrated models, robust evaluation, and system-level analysis beyond the present prototype.
+\end{document}
