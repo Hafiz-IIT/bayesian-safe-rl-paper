@@ -11,6 +11,7 @@
 This manuscript specifies a research direction for using uncertainty-aware Bayesian estimates to inform intervention decisions in autonomous control. The companion implementation currently demonstrates a scalar Normal--Normal posterior update and interval-based ALLOW, VERIFY, or BLOCK gate. It is not a complete Bayesian reinforcement-learning algorithm and provides no formal safety guarantee.
 \end{abstract}
 \section{Motivation}
+Safe reinforcement learning treats constraints on learning and deployment as part of the problem, not merely as a reward penalty \cite{garcia2015safe,berkenkamp2017safe}.
 An autonomous controller should not treat a point prediction as certainty. When predicted risk is close to a decision threshold, uncertainty can justify evidence gathering or human review rather than immediate action.
 \section{Scalar model}
 For a scalar latent hazard parameter with Gaussian prior $\theta\sim\mathcal{N}(\mu_0,\sigma_0^2)$ and observations with known Gaussian noise variance, the posterior remains Gaussian. The prototype implements the conjugate update and forms an interval using a configurable multiplier.
