@@ -1,15 +1,22 @@
-# Bayesian Safe RL — Research Manuscript
+# Bayesian Linear Models as Priors for Safe Reinforcement Learning in Robotics
 
-Manuscript companion to **Bayesian Safe RL Lab**.
+**Status: manuscript in preparation; not submitted or published.**
 
-## Research question
-Can transition uncertainty be incorporated into action authorization so that uncertain predictions trigger verification rather than silent execution?
+This repository contains manuscript source and an experiment protocol for evaluating uncertainty-aware decision gates in autonomous control.
 
-## Sections
-- `paper/abstract.md`
-- `paper/method.md`
-- `paper/claims.md`
-- `paper/limitations.md`
-- `paper/reproducibility.md`
+## Files
+- paper/main.tex — manuscript source
+- paper/EXPERIMENT_PROTOCOL.md — synthetic data, baselines, metrics, and stress tests
+- modular notes in paper/ — abstract, method, claims, limitations, reproducibility
+- Makefile — local PDF build target
 
-**Status:** research scaffold; no safety certification or publication claim.\n\n## Companion relationship\n\nThis repository is the **manuscript companion** to [Bayesian Safe RL Lab](https://github.com/Hafiz-IIT/bayesian-safe-rl-lab), the executable prototype. The manuscript does not establish safety certification or deployment.\n
+## Build
+Requires LaTeX with geometry, AMS math, booktabs, and hyperref packages.
+
+    make pdf
+    make clean
+
+## Evidence boundary
+The companion lab implements a scalar Normal-Normal posterior update and ALLOW/VERIFY/BLOCK heuristic. It is not a complete Bayesian RL system, calibrated safety certificate, or robotic deployment. No empirical safety claim is made.
+
+Companion code: https://github.com/Hafiz-IIT/bayesian-safe-rl-lab
