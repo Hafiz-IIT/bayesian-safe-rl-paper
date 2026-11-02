@@ -1,1 +1,1 @@
-Manuscript scaffold linked to the uncertainty-aware action gate prototype; no publication or certification claim.
+LaTeX manuscript, verified safe-RL references, experiment protocol, and results schema are in place. CI compiles the source. No calibrated safety result, complete Bayesian RL implementation, submission, or publication is claimed.
